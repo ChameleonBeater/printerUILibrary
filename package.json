@@ -1,5 +1,5 @@
 {
-  "name": "printer-ui",
+  "name": "printer-compt",
   "version": "1.0.0",
   "description": "an ui library by vue and minprogram",
   "main": "index.js",
@@ -50,7 +50,11 @@
     "vue-template-es2015-compiler": "^1.6.0",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "transliteration": "^1.6.2"
   },
-  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme"
+  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme",
+  "dependencies": {
+    "copy-webpack-plugin": "^4.5.1"
+  }
 }
