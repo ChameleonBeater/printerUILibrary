@@ -1,0 +1,19 @@
+{
+  "name": "printer-ui",
+  "version": "1.0.0",
+  "description": "an ui library by vue and minprogram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChameleonBeater/printerUILibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChameleonBeater/printerUILibrary/issues"
+  },
+  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme"
+}
