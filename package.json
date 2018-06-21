@@ -4,6 +4,7 @@
   "description": "an ui library by vue and minprogram",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "babel-plugin-syntax-jsx": "^6.8.0",
     "babel-plugin-transform-vue-jsx": "^3.3.0",
     "babel-preset-es2015": "^6.14.0",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^3.1.3",
     "css-loader": "^0.28.7",
     "es6-promise": "^4.0.5",
@@ -35,12 +37,19 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "extract-text-webpack-plugin": "^3.0.1",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "json-templater": "^1.2.0",
     "markdown-it": "^6.1.1",
     "markdown-it-anchor": "^2.5.0",
     "markdown-it-container": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "progress-bar-webpack-plugin": "^1.11.0",
+    "sass-loader": "^7.0.3",
+    "transliteration": "^1.6.2",
+    "uppercamelcase": "^3.0.0",
     "url-loader": "^0.6.2",
     "vue": "^2.5.2",
     "vue-loader": "^13.3.0",
@@ -50,11 +59,7 @@
     "vue-template-es2015-compiler": "^1.6.0",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1",
-    "webpack-node-externals": "^1.6.0",
-    "transliteration": "^1.6.2"
+    "webpack-node-externals": "^1.6.0"
   },
-  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme",
-  "dependencies": {
-    "copy-webpack-plugin": "^4.5.1"
-  }
+  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme"
 }

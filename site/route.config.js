@@ -1,15 +1,13 @@
 import navConfig from './nav.config.json';
 
-const LOAD_MAP = {
-  'compt': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/compt/${name}.vue`)),
-    'compt');
-  }
+const LOAD_MAP = name => {
+  return r => require.ensure([], () =>
+    r(require(`./pages/${name}.vue`)),
+  'changelog');
 };
 
-const load = function(lang, path) {
-  return LOAD_MAP[lang](path);
+const load = function(lang, name) {
+  return LOAD_MAP(name);
 };
 
 const LOAD_DOCS_MAP = {
@@ -26,27 +24,22 @@ const loadDocs = function(lang, path) {
 
 const registerRoute = (navConfig) => {
   let route = [];
-  Object.keys(navConfig).forEach((lang, index) => {
-    let navs = navConfig[lang];
+  navConfig.configs.forEach((target, index) => {
+    let lang = target.name;
     route.push({
-      path: `/${ lang }/`,
-      redirect: `/${ lang }/BottomUpShell`,
-      component: load(lang, ''),
+      path: `/${ lang }`,
+      component: load(lang, target.name),
       children: []
     });
-    navs.forEach(nav => {
-      if (nav.href) return;
-      if (nav.list) {
-        nav.list.forEach(item => {
-          item.forEach(nav => {
-            addRoute(nav, lang, index);
-          });
-        });
-      }
-    });
+    if (target.href) return;
+    if (target.list) {
+      target.list.forEach(item => {
+        addRoute(item, lang, index);
+      });
+    }
   });
   function addRoute(page, lang, index) {
-    const component = page.path === '/changelog'
+    const component = page.type !== 'c'
       ? load(lang, 'changelog')
       : loadDocs(lang, page.path);
     let child = {
@@ -56,13 +49,12 @@ const registerRoute = (navConfig) => {
         description: page.description,
         lang
       },
-      name: 'compt-' + lang + (page.title || page.name),
-      component: component.default || component
+      name: page.title || page.name,
+      component: component
     };
 
     route[index].children.push(child);
   }
-
   return route;
 };
 
@@ -72,9 +64,7 @@ let defaultPath = '/compt';
 route = route.concat([{
   path: '/',
   redirect: defaultPath
-}, {
-  path: '*',
-  redirect: defaultPath
 }]);
 
+console.log(route);
 export default route;

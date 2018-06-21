@@ -1,0 +1,19 @@
+{
+  "configs": [
+    {
+      "name": "changelog",
+      "title": "changelog"
+    },
+    {
+      "name": "compt",
+      "title": "组件",
+      "list": [
+        {
+          "path": "/BottomUpShell",
+          "type": "c",
+          "title": "BottomUpShell 上滑组件"
+        }
+      ]
+    }
+  ]
+}

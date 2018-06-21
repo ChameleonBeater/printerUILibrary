@@ -24,10 +24,10 @@ Intro: 底部滑出组件，可定制高度
 */
 export default {
   name: 'BottomUpShell',
-  data () {
+  data() {
     return {
       showShell: false
-    }
+    };
   },
   props: {
     shellContH: {
@@ -39,14 +39,14 @@ export default {
     }
   },
   methods: {
-    slideUpShell () {
-      this.showShell = true
+    slideUpShell() {
+      this.showShell = true;
     },
-    slideDownShell () {
-      this.showShell = false
+    slideDownShell() {
+      this.showShell = false;
     }
   }
-}
+};
 
 </script>
 <style lang="scss" scoped>

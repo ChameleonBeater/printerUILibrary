@@ -10,8 +10,8 @@ const slugify = require('transliteration').slugify;
 const striptags = require('./strip-tags');
 let alias = {
   main: path.resolve(__dirname, '../src'),
-  packages: path.resolve(__dirname, '../packages'),
-  examples: path.resolve(__dirname, '../examples'),
+  packages: path.resolve(__dirname, '../compt'),
+  examples: path.resolve(__dirname, '../site'),
   'printer-compt': path.resolve(__dirname, '../')
 }
 
@@ -40,8 +40,8 @@ const webpackConfig = {
     'printer-compt': './src/index.js'
   } : './site/index.js',
   output: {
-    path: path.resolve(process.cwd(), './site/element-ui/'),
-    publicPath: process.env.CI_ENV || '',
+    path: path.resolve(process.cwd(), './site/printer-compt/'),
+    publicPath: '/',
     filename: '[name].[hash:7].js',
     chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
   },
