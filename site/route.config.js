@@ -40,7 +40,7 @@ const registerRoute = (navConfig) => {
   });
   function addRoute(page, lang, index) {
     const component = page.type !== 'c'
-      ? load(lang, 'changelog')
+      ? load(lang, page.name)
       : loadDocs(lang, page.path);
     let child = {
       path: page.path.slice(1),
@@ -66,5 +66,4 @@ route = route.concat([{
   redirect: defaultPath
 }]);
 
-console.log(route);
 export default route;

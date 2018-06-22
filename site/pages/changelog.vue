@@ -5,11 +5,6 @@
 </template>
 <script>
   export default {
-    name: 'changelog',
-    methods: {
-      hello() {
-        alert('Hello World!');
-      }
-    }
+    name: 'changelog'
   };
 </script>
