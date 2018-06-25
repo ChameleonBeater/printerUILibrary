@@ -43,6 +43,7 @@
   <div class="btn" @click="showShell">弹起</div>
 </div>
 
+#### html:
 ```html
   <template>
    <div class="main">
@@ -57,7 +58,8 @@
   </div>
   </template>
 ```
-```javascript
+#### javascript:
+```js
   export default {
     methods: {
       showShell() {
