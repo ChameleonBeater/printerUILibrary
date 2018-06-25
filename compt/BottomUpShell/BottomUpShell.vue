@@ -51,7 +51,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .shell-cover{
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;

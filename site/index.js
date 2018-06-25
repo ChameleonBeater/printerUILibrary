@@ -3,8 +3,10 @@ import entry from './app';
 import VueRouter from 'vue-router';
 import PrinterCmpt from 'main/index.js';
 import routes from './route.config';
+import phoneCase from './compt/phone-case.vue';
 Vue.use(PrinterCmpt);
 Vue.use(VueRouter);
+Vue.component('phone-case', phoneCase);
 const router = new VueRouter({
   mode: 'hash',
   base: __dirname,
