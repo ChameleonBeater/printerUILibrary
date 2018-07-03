@@ -5,8 +5,12 @@
       "title": "changelog"
     },
     {
+      "name": "wxMinPro",
+      "title": "微信小程序组件"
+    },
+    {
       "name": "compt",
-      "title": "组件",
+      "title": "H5组件",
       "list": [
         {
           "path": "/Intro",
