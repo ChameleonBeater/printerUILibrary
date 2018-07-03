@@ -6,12 +6,21 @@
     },
     {
       "name": "compt",
-      "title": "组件",
       "list": [
+        {
+          "path": "/Intro",
+          "title": "关于",
+          "type": "c"
+        },
         {
           "path": "/BottomUpShell",
           "type": "c",
           "title": "BottomUpShell 上滑组件"
+        },
+        {
+          "path": "/LeftSlider",
+          "type": "c",
+          "title": "LeftSlider 左滑"
         }
       ]
     }

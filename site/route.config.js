@@ -52,7 +52,6 @@ const registerRoute = (navConfig) => {
       name: page.title || page.name,
       component: component
     };
-
     route[index].children.push(child);
   }
   return route;
@@ -60,10 +59,9 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig);
 let defaultPath = '/compt';
-
+console.log(route);
 route = route.concat([{
   path: '/',
   redirect: defaultPath
 }]);
-
 export default route;

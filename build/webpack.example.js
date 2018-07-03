@@ -19,13 +19,6 @@ const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
 const isPlay = !!process.env.PLAY_ENV;
 
-function convert(str) {
-  str = str.replace(/(&#x)(\w{4});/gi, function($0) {
-    return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16));
-  });
-  return str;
-}
-
 function wrap(render) {
   return function() {
     return render.apply(this, arguments)
@@ -77,7 +70,16 @@ const webpackConfig = {
       },
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader'
+        loader: 'vue-markdown-loader',
+        options: {
+          preprocess: function(MarkdownIt, source) {
+            MarkdownIt.renderer.rules.table_open = function() {
+              return '<table class="table">';
+            };
+            MarkdownIt.renderer.rules.fence = wrap(MarkdownIt.renderer.rules.fence);
+            return source;
+          }
+        }
       },
       {
         test: /\.json$/,

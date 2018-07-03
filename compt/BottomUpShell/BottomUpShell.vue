@@ -1,13 +1,13 @@
 <template>
   <transition name="fade">
   <div 
-  class="shell-cover" 
+  class="bus-shell-cover" 
   v-show="showShell" 
   v-on:click="slideDownShell"
   :style="{zIndex: zIndex}"
   >
     <div 
-    class="shell-content" 
+    class="bus-shell-content" 
     :style="{maxHeight: shellContH + 'px'}"
     v-on:click.stop
     >
@@ -20,7 +20,7 @@
 /*
 Author: leeds@in66.com
 Data: 2018/6
-Intro: 底部滑出组件，可定制高度
+Intro: 底部滑出组件，可限制高度
 */
 export default {
   name: 'BottomUpShell',
@@ -50,7 +50,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-.shell-cover{
+.bus-shell-cover{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@ export default {
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.shell-content{
+.bus-shell-content{
   position: absolute;
   width: 100%;
   left: 0;
@@ -69,7 +69,7 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
-  .shell-content {
+  .bus-shell-content {
     transform: translate(0, 100%);
   }
 }
@@ -77,7 +77,7 @@ export default {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .3s ease;
-  .shell-content {
+  .bus-shell-content {
     transition: transform .3s ease;
   }
 }
