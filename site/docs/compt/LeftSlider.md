@@ -10,6 +10,10 @@
     transform: translate(-50%, -50%);
     color: #fff;
   }
+  .img{
+    width: 150px;
+    padding-top: 10px;
+  }
 </style>
 
 ## 左滑组件
@@ -33,6 +37,8 @@
       </div>
     </left-slider>
   </phone-case>
+  <h3>实现如下功能：</h3>
+  <img src="/site/assetes/leftSlider.png" class="img" />
 </div>
 
 #### html:

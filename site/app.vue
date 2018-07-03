@@ -11,33 +11,8 @@
       overflow: hidden;
     }
   }
-
-  #app {
-    height: 100%;
-    @when component {
-      overflow-y: hidden;
-      .main-cnt {
-        padding: 0;
-        margin-top: 0;
-        height: 100%;
-        min-height: auto;
-      }
-      .headerWrapper {
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
-        z-index: 1500;
-        
-        .container {
-          padding: 0;
-        }
-      }
-    }
-  }
-
+  
   a {
-    color: #409EFF;
     text-decoration: none;
   }
 
