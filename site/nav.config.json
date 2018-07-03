@@ -6,6 +6,7 @@
     },
     {
       "name": "compt",
+      "title": "组件",
       "list": [
         {
           "path": "/Intro",

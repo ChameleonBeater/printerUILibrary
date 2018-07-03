@@ -28,6 +28,7 @@ const registerRoute = (navConfig) => {
     let lang = target.name;
     route.push({
       path: `/${ lang }`,
+      title: target.title,
       component: load(lang, target.name),
       children: []
     });

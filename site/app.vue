@@ -164,21 +164,29 @@
       padding: 0 12px;
     }
   }
+  .router-view{
+    padding-left: 300px;
+  }
 </style>
 
 <template>
   <div id="app" >
     <div class="main-cnt">
-      <router-view></router-view>
+      <side-navigation :list="routes"></side-navigation>
+      <router-view class="router-view"></router-view>
     </div>
   </div>
 </template>
 
 <script>
-  import 'highlight.js/styles/github.css';
-  import 'github-markdown-css';
+  import routes from './route.config';
   export default {
     name: 'app',
+    data() {
+      return {
+        routes: routes
+      };
+    },
     computed: {
     },
     watch: {
