@@ -68,5 +68,8 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-node-externals": "^1.6.0"
   },
-  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme"
+  "homepage": "https://github.com/ChameleonBeater/printerUILibrary#readme",
+  "dependencies": {
+    "raw-loader": "^0.5.1"
+  }
 }

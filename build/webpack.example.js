@@ -103,7 +103,7 @@ const webpackConfig = {
       },
       {
         test: /\.svg(\?\S*)?$/,
-        loader: 'url-loader',
+        loader: 'raw-loader',
         query: {
           limit: 10000,
           name: path.posix.join('static', '[name].[hash:7].[ext]')

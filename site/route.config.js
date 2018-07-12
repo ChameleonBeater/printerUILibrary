@@ -60,7 +60,6 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig);
 let defaultPath = '/compt';
-console.log(route);
 route = route.concat([{
   path: '/',
   redirect: defaultPath
