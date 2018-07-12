@@ -33,9 +33,9 @@
           "title": "Sticky 吸顶组件"
         },
         {
-          "path": "/Waiting",
+          "path": "/Layer",
           "type": "c",
-          "title": "Waiting 交互组件"
+          "title": "Layer 组件"
         }
       ]
     }

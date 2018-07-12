@@ -27,7 +27,7 @@
 应用组件，或者直接应用插件即可实现功能
 
 ### demo
-<Sticky :stickyConfig="stickyConfig">
+<Sticky v-if="has" :stickyConfig="stickyConfig">
   <template slot="stickySolt">
     <h1>Here might be a page title</h1>
   </template>
@@ -37,7 +37,7 @@
 #### html:
 ```html
   <template>
-    <Sticky :stickyConfig="stickyConfig">
+    <Sticky v-if="has" :stickyConfig="stickyConfig">
       <template slot="stickySolt">
         <h1>Here might be a page title</h1>
       </template>
@@ -49,6 +49,7 @@
   export default {
     data () {
       return {
+        has: false,
         stickyConfig: {
           zIndex: 10,
           stickyTop: 0
@@ -62,6 +63,7 @@
   export default {
     data () {
       return {
+        has: false,
         stickyConfig: {
           zIndex: 10,
           stickyTop: 0
