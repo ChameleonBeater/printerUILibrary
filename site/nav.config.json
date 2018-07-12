@@ -26,6 +26,11 @@
           "path": "/LeftSlider",
           "type": "c",
           "title": "LeftSlider 左滑"
+        },
+        {
+          "path": "/Sticky",
+          "type": "c",
+          "title": "Sticky 吸顶组件"
         }
       ]
     }

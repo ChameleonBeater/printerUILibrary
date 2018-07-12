@@ -1,9 +1,11 @@
 import BottomUpShell from '../compt/BottomUpShell/index.js';
 import LeftSlider from '../compt/LeftSlider/index.js';
+import Sticky from '../compt/Sticky/index.js';
 
 const components = [
   BottomUpShell,
-  LeftSlider
+  LeftSlider,
+  Sticky
 ];
 
 const install = function(Vue, opts = {}) {
@@ -27,7 +29,8 @@ module.exports = {
   version: '1.0.0',
   install,
   BottomUpShell,
-  LeftSlider
+  LeftSlider,
+  Sticky
 };
 
 module.exports.default = module.exports;
