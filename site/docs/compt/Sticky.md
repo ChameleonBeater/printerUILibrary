@@ -49,7 +49,7 @@
   export default {
     data () {
       return {
-        has: false,
+        has: true,
         stickyConfig: {
           zIndex: 10,
           stickyTop: 0
@@ -63,7 +63,7 @@
   export default {
     data () {
       return {
-        has: false,
+        has: true,
         stickyConfig: {
           zIndex: 10,
           stickyTop: 0
