@@ -30,16 +30,16 @@
 
   <Layer :showDialog="showDialog" 
          :dialogTextConfig="contextConf"
-         @dialogSure="showDialog = false"
-         @dialogCancle="showDialog = false"></Layer>
+         @dialogSure="confirmHandler"
+         @dialogCancle="cancelHandler"></Layer>
   <button @click="showDialog = true">弹出信息</button>
 #### html:
 ```html
   <template>
     <Layer :showDialog="showDialog" 
        :dialogTextConfig="contextConf"
-       @dialogSure="showDialog = false"
-       @dialogCancle="showDialog = false"></Layer>
+       @dialogSure="confirmHandler"
+       @dialogCancle="cancelHandler"></Layer>
     <button @click="showDialog = true">弹出信息</button>
   </template>
 ```
@@ -83,9 +83,11 @@
     methods: {
       confirmHandler () {
         alert('点了确认')
+        this.showDialog = false
       },
       cancelHandler () {
         alert('点了取消')
+        this.showDialog = false
       }
     }
   }
